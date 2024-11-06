@@ -1,6 +1,10 @@
 # Fractal Visualization with Mandelbrot and Julia Sets (a micro-project for High Performance Computing class)
 
 ## This project generates **Mandelbrot** and **Julia** fractals, showcasing self-similarity through iterative processes utilizing OpenMP parallelization.
+![image](https://github.com/user-attachments/assets/40da792a-778a-4465-940d-06708ca6be73)
+![image](https://github.com/user-attachments/assets/9d5b9664-9849-48eb-aa6f-33101ae79fb5)
+
+
 
 ### What are Fractals?
 Fractals are complex shapes that exhibit self-similarity at every scale. The **Mandelbrot set** and **Julia set** are examples of fractals, created by iterating functions over complex numbers.
@@ -11,8 +15,11 @@ Fractals are complex shapes that exhibit self-similarity at every scale. The **M
 
 ### Performance with OpenMP
 Using **OpenMP**, we parallelize fractal generation, reducing computation time:
-- **Serial**: ~21 seconds
-- **Parallel (OpenMP)**: ~7 seconds (3x faster)
+### - **Serial**: ~21 seconds
+![image](https://github.com/user-attachments/assets/15e04be1-c4a1-4106-b6d3-ef6d02b31eb1)
+
+### - **Parallel (OpenMP)**: ~7 seconds (3x faster)
+![image](https://github.com/user-attachments/assets/1d01ca58-e7c5-4aab-9283-ba78a0af862e)
 
 ### Scaling with HPC
 
