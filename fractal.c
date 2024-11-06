@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <omp.h>
 
 #define WIDTH 800
 #define HEIGHT 800
-#define MAX_ITER 1000
+#define MAX_ITER 50000
 
 //mapping the number of iterations to a color
 void get_color(int n, int *r, int *g, int *b) {
@@ -73,7 +74,8 @@ int main() {
     double x_min = -2.0, x_max = 1.0;
     double y_min = -1.5, y_max = 1.5;
 
-    printf("Generating Mandelbrot set...\n");
+    printf("Generating Mandelbrot set with parallelization...\n");
+    #pragma omp parallel for collapse(2)
     for (int i = 0; i < HEIGHT; i++) {
         for (int j = 0; j < WIDTH; j++) {
             double real = x_min + j * (x_max - x_min) / WIDTH;
@@ -89,7 +91,8 @@ int main() {
     printf("Mandelbrot set generated and saved as mandelbrot.pgm and mandelbrot_color.ppm\n");
 
     double c_real = -0.7, c_imag = 0.27015;  // using julia constant
-    printf("Generating Julia set...\n");
+    printf("Generating Julia set with parallelizatin...\n");
+    #pragma omp parallel for collapse(2)
     for (int i = 0; i < HEIGHT; i++) {
         for (int j = 0; j < WIDTH; j++) {
             double real = x_min + j * (x_max - x_min) / WIDTH;
