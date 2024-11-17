@@ -1,9 +1,10 @@
 # Fractal Visualization with Mandelbrot and Julia Sets (a micro-project for High Performance Computing class)
 
-## This project generates **Mandelbrot** and **Julia** fractals, showcasing self-similarity through iterative processes by OpenMP parallelization for the first assessment. Then, it works on zooming into fractals by using CUDA as well as creating an animation of the Mandelbrot set for the second assessment. 
+## This project generates **Mandelbrot** and **Julia** fractals, showcasing self-similarity through iterative processes by OpenMP parallelization for the first assessment. 
 ![image](https://github.com/user-attachments/assets/40da792a-778a-4465-940d-06708ca6be73)
 ![image](https://github.com/user-attachments/assets/9d5b9664-9849-48eb-aa6f-33101ae79fb5)
-
+## Then, it works on zooming into fractals by using CUDA as well as creating an animation of the Mandelbrot set for the second assessment. 
+![mandelbrot_zoom](https://github.com/user-attachments/assets/69ccd097-1524-4707-802b-839f6ed5190c)
 
 
 ### What are Fractals?
@@ -63,6 +64,7 @@ This project benefits from High Performance Computing (HPC) techniques, enabling
    - `mandelbrot.pgm`
    - `julia.pgm`
 ### II. Cuda Folder: Mandelbrot Zoom Animation
+
 The CUDA code utilizes GPU parallelization to compute the Mandelbrot fractal for multiple frames, creating a smooth zoom effect.
 
 1. **Initial Parameters**: The zoom starts from the **Seahorse Valley** of the Mandelbrot set.
